@@ -1,5 +1,6 @@
 import Posts from './Posts';
 import { render, configure, shallow, mount } from 'enzyme';
+import toJson from 'enzyme-to-json';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 
 configure({
@@ -7,7 +8,7 @@ configure({
 });
 
 describe('<Posts />', () => {
-  const component = shallow(<Posts />);
+  let component = shallow(<Posts />);
   let wrapper;
 
   it('should render include a link', () => {
@@ -16,7 +17,11 @@ describe('<Posts />', () => {
   });
 
   it('renders posts', () => {
-    console.log(component);
-    expect(component).toMatchSnapshot();
+    expect(toJson(component)).toMatchSnapshot(); // toJSON must be used in new version
+  });
+
+  it('renders all nested tags', () => {
+    component = render(<Posts />);
+    expect(toJson(component)).toMatchSnapshot();
   });
 });

@@ -8,10 +8,12 @@
     "@testing-library/user-event": "^12.1.10",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.5",
     "enzyme": "^3.11.0",
+    "enzyme-to-json": "^3.6.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "react-test-render": "^1.1.2",
+    "react-test-renderer": "^17.0.2",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

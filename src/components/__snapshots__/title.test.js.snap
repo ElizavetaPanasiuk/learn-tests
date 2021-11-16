@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Title /> should return component with default props 1`] = `
+<h1
+  className="title"
+>
+  test title
+</h1>
+`;
+
+exports[`<Title /> should return component with piped props 1`] = `
+<h1
+  className="title"
+>
+  Simple title
+</h1>
+`;
